@@ -11,21 +11,21 @@ export class QueryParamBuilder {
   }
 
   addKeyValue(key: string, value: string) {
-    if (key != null && key != '' && value != null) {
-      this.logger.debug('Adding >>> ' + key + ' -- ' + value);
+    if (key != null && key != '' && value != null && value!='') {
+      this.logger.log('Adding >>> ' + key + ' -- ' + value);
       this.queryParamsMap.set(key, value);
     }
   }
 
   retrieveQueryString(): string {
     let queryString: string = '';
-    this.logger.debug(
+    this.logger.log(
       'queryParamsMap >>> ' + JSON.stringify(this.queryParamsMap)
     );
     for (let [key, value] of this.queryParamsMap.entries()) {
       queryString = queryString + key + '=' + value + '&';
     }
-    this.logger.debug('Retrieve final query string >>> ' + queryString);
+    this.logger.log('Retrieve final query string >>> ' + queryString);
     return queryString;
   }
 }

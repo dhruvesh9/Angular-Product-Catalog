@@ -9,10 +9,11 @@ import { LoggerService } from '../service/logger.service';
 import { ProductService } from '../service/product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { QueryParamBuilder } from '../util/query.param.builder';
+import { ShoppingCartComponent } from 'src/shopping-cart/shopping.cart.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
-  declarations: [AppComponent, ProductsListComponent],
+  declarations: [AppComponent, ProductsListComponent, ShoppingCartComponent],
   providers: [
     LoggerService,
     ProductService,

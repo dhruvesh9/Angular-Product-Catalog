@@ -11,7 +11,4 @@ export class LoggerService {
   warn(msg: any) {
     console.warn(msg);
   }
-  debug(msg: any) {
-    console.debug(msg);
-  }
 }

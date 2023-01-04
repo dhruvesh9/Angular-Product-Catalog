@@ -1,15 +1,56 @@
-<nav>
-  <ul>
-    <li>
-      <a
-        routerLink="/products"
-        routerLinkActive="active"
-        ariaCurrentWhenActive="page"
-        >Products Component</a
-      >
-    </li>
-    <!-- <li><a routerLink="/second-component" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li> -->
-  </ul>
-</nav>
-<p>Start editing to see some magic happen :)</p>
+<header>
+  <div class="bg-dark collapse" id="navbarHeader">
+    <div class="container">
+      <!-- <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
+          </ul>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        &nbsp;<strong>Angular Product Catalog</strong>
+      </a>
+      <!-- <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+    </div>
+  </div>
+</header>
+
+<div class="p-4 border rounded-3 mb-4">
+    <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist"
+      style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+      <li class="nav-item" role="presentation">
+        <button routerLink="/products" routerLinkActive="active" ariaCurrentWhenActive="page"
+          class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab"
+          aria-selected="true">Products</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button routerLink="/shoppingCart" routerLinkActive="inactive" ariaCurrentWhenActive="page"
+          class="nav-link rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab"
+          aria-selected="true">Cart</button>
+      </li>
+      <!-- <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
+          aria-selected="false">Category</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab"
+          aria-selected="false">Product Search</button>
+      </li> -->
+    </ul>
+  </div>
 <router-outlet></router-outlet>
